@@ -1,0 +1,51 @@
+{
+  "name": "zmark",
+  "description": "A markdown+math parser built for speed",
+  "author": "Zisu Zhang",
+  "version": "0.0.1",
+  "main": "./lib/zmark.js",
+  "bin": "./bin/zmark",
+  "man": "./man/zmark.1",
+  "repository": "git://github.com/zhangzisu/zmark.git",
+  "homepage": "https://zhangzisu.cn/zmark",
+  "bugs": {
+    "url": "http://github.com/zhangzisu/zmark/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "markdown",
+    "markup",
+    "html"
+  ],
+  "tags": [
+    "markdown",
+    "markup",
+    "html"
+  ],
+  "devDependencies": {
+    "commonmark": "0.x",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "eslint-plugin-vuln-regex-detector": "^1.0.4",
+    "front-matter": "^2.3.0",
+    "glob-to-regexp": "0.3.0",
+    "@markedjs/html-differ": "^2.0.0",
+    "jasmine": "^3.2.0",
+    "jasmine2-custom-message": "^0.9.3",
+    "markdown": "0.x",
+    "markdown-it": "8.x",
+    "uglify-js": "^3.4.8"
+  },
+  "scripts": {
+    "lint": "eslint --fix bin/zmark .",
+    "build": "uglifyjs lib/zmark.js -cm  --comments /Copyright/ -o zmark.min.js",
+    "preversion": "npm run build && (git diff --quiet || git commit -am 'minify')"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}

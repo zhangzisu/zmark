@@ -1,0 +1,10 @@
+{
+  "name": "zmark",
+  "version": "0.3.4",
+  "repo": "zhangzisu/zmark",
+  "description": "A markdown parser built for speed",
+  "keywords": ["markdown", "markup", "html"],
+  "scripts": ["lib/zmark.js"],
+  "main": "lib/zmark.js",
+  "license": "MIT"
+}
