@@ -47,7 +47,7 @@
   "scripts": {
     "lint": "eslint --fix bin/zmark .",
     "build": "uglifyjs lib/zmark.js -cm  --comments /Copyright/ -o zmark.min.js",
-    "preversion": "npm run build && (git diff --quiet || git commit -am 'minify')"
+    "preversion": "yarn build && (git diff --quiet || git commit -am 'minify')"
   },
   "engines": {
     "node": ">=0.10.0"
