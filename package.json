@@ -2,7 +2,7 @@
   "name": "zmark",
   "description": "A markdown+math parser built for speed",
   "author": "Zisu Zhang",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "./lib/zmark.js",
   "bin": "./bin/zmark",
   "man": "./man/zmark.1",
